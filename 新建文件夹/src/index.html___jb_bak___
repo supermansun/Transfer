@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>美罗全球精品购</title>
+</head>
+
+<body>
+<a name="top" id="top"></a>
+    <div class="wrap">
+        <div class="part part-top">
+            <div class="search-box">
+                <img src="img/title.png" alt="" />
+                <div class="search-btn"></div>
+            </div>
+			<div class="search hide">
+				<input type="text" placeholder="请输入商品名称/品牌"/>
+			</div>
+            <div class="main-pic">
+                <div class="lunbo">
+                    <img src="img/lunbo1.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="part part-kj">
+            <div class="part-title">
+                <h2 class="item-title">
+					<img src="img/kuaijinggou.png" alt=""/>
+					<a class="more" href="###">更多></a>
+				</h2>
+            </div>
+            <div class="pic-con kjpic">
+                <div class="kj-item">
+                    <img src="img/kj_i.png" alt="" />
+                </div>
+                <div class="kj-item">
+                    <img src="img/kj_i.png" alt="" />
+                </div>
+                <div class="kj-item">
+                    <img src="img/kj_i.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="part part-sc">
+            <div class="part-title">
+                <h2 class="item-title">
+					<img src="img/shechipin.png" alt=""/>
+					<a class="more" href="###">更多></a>
+				</h2>
+            </div>
+            <div class="pic-con kjpic scpic">
+                <div class="sc-item">
+                    <img src="img/sc_1.png" alt="shecipin" />
+                </div>
+                <div class="sc-item">
+                    <img src="img/sc_2.png" alt="shecipin" />
+                </div>
+            </div>
+        </div>
+        <div class="part part-mz">
+            <div class="part-title">
+                <h2 class="item-title">
+					<img src="img/meizhuang.png" alt=""/>
+					<a class="more" href="###">更多></a>
+				</h2>
+            </div>
+            <div class="pic-con kjpic mzpic">
+                <div class="mz-item sc-item item">
+                    <img src="img/mz_1.png" alt="shecipin" />
+                    <p class="categroy">
+                        香水彩妆
+                    </p>
+                </div>
+                <div class="mz-item sc-item">
+                    <div class="mz-right-top right-top  item">
+                        <img src="img/yd.png" alt="" />
+                        <p class="categroy">
+                            香水彩妆
+                        </p>
+                    </div>
+                    <div class="mz-right-bottom right-bottom item">
+                        <img src="img/mz_3.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part part-jpfz">
+            <div class="part-title">
+                <h2 class="item-title">
+					<img src="img/jingpinfuhsi.png" alt=""/>
+					<a class="more" href="###">更多></a>
+				</h2>
+            </div>
+            <div class="pic-con kjpic jpfu-pic">
+                <div class="jpfs-item sc-item item">
+                    <img src="img/jpfu_1.png" alt="shecipin" />
+                </div>
+                <div class="jpfs-item sc-item">
+                    <div class="jpfs-right-top right-top item">
+                        <img src="img/jpfu_2.png" alt="" />
+                    </div>
+                    <div class="jpfs-right-bottom right-bottom item">
+                        <img src="img/jpfu_3.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part part-tuijian">
+            <div class="part-title">
+                <h2 class="item-title">
+					<img src="img/tuijian.png" alt=""/>
+					<a class="more" href="###">更多></a>
+				</h2>
+            </div>
+            <div class="pic-con tjpic">
+                <div class="tj-item sc-item">
+                    <img src="img/tuijian_1.png" alt="" />
+                    <p class="good">ZARA女包</p>
+                    <p class="price">¥258</p>
+                </div>
+                <div class="tj-item sc-item">
+                    <img src="img/tuijian_1.png" alt="" />
+                    <p class="good">ZARA女包</p>
+                    <p class="price">¥258</p>
+                </div>
+                <div class="tj-item sc-item">
+                    <img src="img/tuijian_1.png" alt="" />
+                    <p class="good">ZARA女包</p>
+                    <p class="price">¥258</p>
+                </div>
+                <div class="tj-item sc-item">
+                    <img src="img/tuijian_1.png" alt="" />
+                    <p class="good">ZARA女包</p>
+                    <p class="price">¥258</p>
+                </div>
+            </div>
+        </div>
+		<div class="foot">
+			<p class="load">登录</p><span></span>
+			<p class="regist">注册</p>
+			<p class="totop"><a href="#top">回到顶部</a></p>
+		</div>
+		<div class="goto">
+			<span class="mobile cur">触屏版</span>
+			<span class="pc">电脑版</span>
+		</div>
+    </div>
+<script>
+	$(".search-btn").click(function(){
+        $(".search").toggleClass("hide");
+    });
+</script>
+</body>
+</html>
