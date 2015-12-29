@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://qianrou.coding.io/prj/myLuckyWheel/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		
+		<title>大轉盤</title>
+		<link rel="stylesheet" href="./大轉盤_files/core.css">
+		<script type="text/javascript" src="./大轉盤_files/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="wheel-con">
+			<div class="wheel-bg">
+				<img src="./大轉盤_files/ly-plate.png">
+			</div>
+			<div class="wheel-center"><img src="./大轉盤_files/draw_button.png" style="transform: rotate(5242.31deg);"></div>
+		</div>
+		<script type="text/javascript" src="./大轉盤_files/ownWhell.min.js"></script>
+		<script>
+			/*================*/
+			//bg与center旋转的角度是相反的
+	
+			var $center = $('.wheel-center img');
+			var $bg = $('.wheel-bg img');
+			var obj = {
+				"ele":$center,
+				"prizeList":[
+					{"prize":4,"rank":1,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":2,"rank":2,"message":{"name":"二等奖","alert":"dd"}},
+					{"prize":4,"rank":3,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":4,"rank":4,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":3,"rank":5,"message":{"name":"三等奖","alert":"dd"}},
+					{"prize":4,"rank":6,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":4,"rank":7,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":1,"rank":8,"message":{"name":"一等奖","alert":"dd"}},
+				]
+			};
+			var WheelRotate = new WheelRotate();
+			$center.on('click',function(){
+				var rd = Math.floor(Math.random()*4+1);
+				WheelRotate.rotateFun(obj,rd,function(ms){
+					alert(ms.name);
+				});
+			});
+			//按钮不能点击
+			//$center.off();
+		</script>
+	
+
+<div id="cli_dialog_div"></div></body></html>

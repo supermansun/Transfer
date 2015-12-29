@@ -1,0 +1,119 @@
+@charset "utf-8";
+html * {
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  max-width: 20rem;
+  overflow: hidden;
+}
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.centerCss3 {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*改变元素基点*/
+/*变换时间*/
+/*旋转rotate*/
+/*设置宽度*/
+/*设置高度*/
+.wheel-bg img {
+  width: 15rem;
+}
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 7.25rem;
+}
+.wheel-center img {
+  width: 4.25rem;
+  -moz-transform-origin: center 2.6875rem;
+  -webkit-transform-origin: center 2.6875rem;
+  -o-transform-origin: center 2.6875rem;
+  -ms-transform-origin: center 2.6875rem;
+  transform-origin: center 2.6875rem;
+}
+.wheel-con {
+  margin: 10px;
+  position: absolute;
+    top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.rotate {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+/*POPBEGING*/
+.mb {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.pz02 {
+  display: none;
+}
+.mb-info {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 26%;
+  left: 0;
+  position: fixed;
+}
+.pop-bg {
+  width: 12.625rem;
+  height: 8.09375rem;
+}
+#fig img {
+  position: relative;
+  top: -5.8125rem;
+  width: 5.40625rem;
+  height: 1.5625rem;
+}
+.pop-cancle {
+  position: relative;
+  top: -7.5625rem;
+  left: 5.2rem;
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+.mb-info .message {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+  position: relative;
+  top: -6.5rem;
+  left: 1.6625rem;
+  line-height: 1.125rem;
+  width: 7.59375rem;
+  height: 2.5rem;
+}
+/*POPEND*/
