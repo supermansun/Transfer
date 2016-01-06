@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://qianrou.coding.io/prj/myLuckyWheel/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		
+		<title>大轉盤</title>
+		<link rel="stylesheet" href="./大轉盤_files/core.css">
+		<script type="text/javascript" src="./大轉盤_files/jquery.min.js"></script>
+		<style type="text/css">
+			.wheel-center img{
+				transition: transform 8s cubic-bezier(0.540, 0.055, 0.000, 1)
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wheel-con">
+			<div class="wheel-bg">
+				<img src="./大轉盤_files/ly-plate.png">
+			</div>
+			<div class="wheel-center"><img src="./大轉盤_files/draw_button.png" style="transform: rotate(5242.31deg);"></div>
+		</div>
+		<script type="text/javascript" src="./大轉盤_files/ownWhell.min.js"></script>
+		<script>
+			/*================*/
+			//bg与center旋转的角度是相反的
+	
+			var $center = $('.wheel-center img');
+			var $bg = $('.wheel-bg img');
+			var obj = {
+				"ele":$center,
+				"prizeList":[
+					{"prize":4,"rank":1,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":2,"rank":2,"message":{"name":"二等奖","alert":"dd"}},
+					{"prize":4,"rank":3,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":4,"rank":4,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":3,"rank":5,"message":{"name":"三等奖","alert":"dd"}},
+					{"prize":4,"rank":6,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":4,"rank":7,"message":{"name":"再接再厉！","alert":"dd"}},
+					{"prize":1,"rank":8,"message":{"name":"一等奖","alert":"dd"}},
+				]
+			};
+			 $center.on('click', function(event) {
+			 	event.preventDefault();
+			 	var f= 5120;
+					$(this).css({
+						"-moz-transform": "rotate(" + f + "deg)",
+						"-webkit-transform": " rotate(" + f + "deg)",
+						"-o-transform": "rotate(" + f + "deg)",
+						"-ms-transform": "rotate(" + f + "deg)",
+						transform: " rotate(" + f + "deg)",
+					})			 	
+			 	/* Act on the event */
+			 });
+			 var luck=new goodLuck($center,obj.prizeList[7]);
+ 			function goodLuck(arg1,arg2){
+ 				console.log(arguments[0]+"##"+arguments[1]);
+ 				var tar=arg1;
+ 				var price= arg2;
+ 				var int_t=1;
+ 				var del_t=5;
+ 				var pos=0;
+ 				var time;
+ 				var round=0;
+ 				var deg_all;
+ 				this.init=function(){
+ 					int_t=1;
+ 					del_t=5;
+ 					pos=0;
+ 					time=null;
+ 					round=0;
+ 					deg_all=0;
+ 					$(tar).css({
+						"-moz-transform": "rotate(" + 0 + "deg)",
+						"-webkit-transform": " rotate(" + 0 + "deg)",
+						"-o-transform": "rotate(" + 0+ "deg)",
+						"-ms-transform": "rotate(" + 0 + "deg)",
+						transform: " rotate(" + 0 + "deg)",
+					});
+					console.log(arguments);
+					var delta = parseInt(360/8*(price.rank-1)+del_t*2+Math.random()*(360/8-del_t*2));
+					deg_all=360*8+delta;
+					console.log("deg_all:"+deg_all);
+					start(delta);
+ 				};
+ 				var start=function(d){
+ 					time=setInterval(scrollfront,int_t);
+ 				};
+ 				var scrollfront=function(d){
+ 					$(tar).css({
+						"-moz-transform": "rotate(" + pos + "deg)",
+						"-webkit-transform": " rotate(" + pos + "deg)",
+						"-o-transform": "rotate(" + pos+ "deg)",
+						"-ms-transform": "rotate(" + pos + "deg)",
+						transform: " rotate(" + pos + "deg)",
+					});
+					clearInterval(time);
+					pos+=del_t;
+					round=parseInt(pos/360);
+					if (Math.abs(pos-deg_all)<5) {
+						alert("ok");
+					}else{
+						count(d,pos);
+					}
+ 				};
+ 				var count=function(d,pos){
+ 					if (round>8) {
+ 						int_t+=2;
+ 					};
+ 					console.log("pos:"+pos+"  "+'del_t:'+del_t+"   "+"int_t:"+int_t+"  "+deg_all);
+ 					time=setInterval(scrollfront,int_t);
+
+ 				}
+ 			}
+		</script>
+	
+
+<div id="cli_dialog_div"></div></body></html>
